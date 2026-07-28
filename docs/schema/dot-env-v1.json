@@ -44,7 +44,7 @@
         },
         "repo": {
           "type": "string",
-          "description": "Source repository identifier (e.g. 'github.com/sebastienrousseau/dotfiles')."
+          "description": "Source repository identifier (e.g. 'github.com/YuriiF/dotfiles')."
         }
       }
     },

@@ -27,7 +27,7 @@ Welcome to your universally compatible, high-performance dotfiles configuration,
 To install these dotfiles on a new machine, run:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/v0.2.511/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/v0.2.511/install.sh)"
 ```
 
 This command will:
@@ -86,7 +86,7 @@ If you are migrating from an old `~/.dotfiles` setup:
 2. **Initialize Chezmoi**:
 
    ```bash
-   git clone https://github.com/sebastienrousseau/dotfiles.git ~/.dotfiles
+   git clone https://github.com/YuriiF/dotfiles.git ~/.dotfiles
    chezmoi apply
    ```
 

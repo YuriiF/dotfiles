@@ -16,7 +16,7 @@ Every open-source project with a public install path publishes a URL of the form
 
 The industry moved off `master` as the default branch name years ago; new repositories default to `main`. Existing repositories, however, live with a naming inconsistency that becomes actively confusing when a maintainer has multiple projects — some on `main`, some still on `master`. The migration is unavoidable, but the operational risk profile is significant enough that most maintainers put it off indefinitely.
 
-This article documents the migration of the [.dotfiles](https://github.com/sebastienrousseau/dotfiles) repository — 60+ files with hardcoded branch references, four external distribution channels, three CI providers tracking the default branch, and a public install command bookmarked by an unknown number of downstream users. The migration was **zero-downtime**: no install command broke, no CI job failed, no downstream integration degraded. The blueprint is generalisable to any medium-complexity open-source repository.
+This article documents the migration of the [.dotfiles](https://github.com/YuriiF/dotfiles) repository — 60+ files with hardcoded branch references, four external distribution channels, three CI providers tracking the default branch, and a public install command bookmarked by an unknown number of downstream users. The migration was **zero-downtime**: no install command broke, no CI job failed, no downstream integration degraded. The blueprint is generalisable to any medium-complexity open-source repository.
 
 ## The Branch-Rename 2026 Architecture Lens #
 
@@ -88,9 +88,9 @@ git remote set-head origin -a
 Post-rename smoke tests:
 
 ```
-$ curl -sI https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh   | head -1
+$ curl -sI https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh   | head -1
 HTTP/2 200
-$ curl -sI https://raw.githubusercontent.com/sebastienrousseau/dotfiles/master/install.sh | head -1
+$ curl -sI https://raw.githubusercontent.com/YuriiF/dotfiles/master/install.sh | head -1
 HTTP/2 200
 ```
 
@@ -125,4 +125,4 @@ The commercial value of a supply-chain-safe rename is defensive, not offensive: 
 
 5. **Rulesets-as-code files must be renamed alongside their JSON targets.** GitHub auto-migrates the *live* ruleset assignment; the file in your repo is the source-of-truth if you ever reapply. Both must agree.
 
-The reference implementation landed as [PR #961](https://github.com/sebastienrousseau/dotfiles/pull/961) with the retirement issue tracked at [#962](https://github.com/sebastienrousseau/dotfiles/issues/962), shipped in [v0.2.510](https://github.com/sebastienrousseau/dotfiles/releases/tag/v0.2.510).
+The reference implementation landed as [PR #961](https://github.com/YuriiF/dotfiles/pull/961) with the retirement issue tracked at [#962](https://github.com/YuriiF/dotfiles/issues/962), shipped in [v0.2.510](https://github.com/YuriiF/dotfiles/releases/tag/v0.2.510).

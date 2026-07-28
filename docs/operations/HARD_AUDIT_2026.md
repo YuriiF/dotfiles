@@ -6,7 +6,7 @@ description: "Operational reliability, performance parity, documentation accurac
 
 # Hard Audit 2026 + Path to De Facto
 
-A consolidated audit of `sebastienrousseau/dotfiles` v0.2.502 across three internal dimensions (operational reliability + performance, documentation accuracy, cross-platform + security posture) and three external dimensions (competitor matrix, 2026 industry trends, adoption playbook). Produced 2026-05-15 by six parallel research tracks.
+A consolidated audit of `YuriiF/dotfiles` v0.2.502 across three internal dimensions (operational reliability + performance, documentation accuracy, cross-platform + security posture) and three external dimensions (competitor matrix, 2026 industry trends, adoption playbook). Produced 2026-05-15 by six parallel research tracks.
 
 The goal stated by the maintainer: become the de facto workstation provisioning tool for every OS. This document is the punch list to get there.
 

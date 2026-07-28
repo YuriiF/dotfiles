@@ -14,7 +14,7 @@ posture across encrypted-disclosure-in and encrypted-secrets-at-rest.
 
 ## Disclosure Key (GPG)
 
-Closes the rotation half of [#870](https://github.com/sebastienrousseau/dotfiles/issues/870).
+Closes the rotation half of [#870](https://github.com/YuriiF/dotfiles/issues/870).
 
 ### Active key
 

@@ -42,7 +42,7 @@ run_lint_with() {
 test_start "lint_passes_on_clean_pin"
 clean_yaml='jobs:
   lint:
-    uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@b0615f8fb5c0f3826f58904a5567eff11b6c500e # master
+    uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@b0615f8fb5c0f3826f58904a5567eff11b6c500e # master
 '
 if run_lint_with "$clean_yaml" >/dev/null 2>&1; then
   ((TESTS_PASSED++)) || true
@@ -68,7 +68,7 @@ fi
 test_start "lint_fails_on_branch_ref"
 branch_yaml='jobs:
   lint:
-    uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@master
+    uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@master
 '
 if run_lint_with "$branch_yaml" >/dev/null 2>&1; then
   ((TESTS_FAILED++)) || true
@@ -81,7 +81,7 @@ fi
 test_start "lint_fails_on_short_sha"
 short_sha_yaml='jobs:
   lint:
-    uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@b0615f8f
+    uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@b0615f8f
 '
 if run_lint_with "$short_sha_yaml" >/dev/null 2>&1; then
   ((TESTS_FAILED++)) || true
@@ -94,7 +94,7 @@ fi
 test_start "lint_fails_on_tag_ref"
 tag_yaml='jobs:
   lint:
-    uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@v0.2.501
+    uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@v0.2.501
 '
 if run_lint_with "$tag_yaml" >/dev/null 2>&1; then
   ((TESTS_FAILED++)) || true

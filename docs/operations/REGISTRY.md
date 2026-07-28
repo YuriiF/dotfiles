@@ -35,7 +35,7 @@ A registry index is a single JSON document:
 {
   "version": 1,
   "updated": "2026-05-15T16:30:00Z",
-  "registry": "sebastienrousseau/dotfiles",
+  "registry": "YuriiF/dotfiles",
   "modules": [
     {
       "name": "rust-dev-setup",
@@ -58,7 +58,7 @@ Recommended keys: `tags` (lower-case array), `maintainer`, `sha256` (pinned at p
 ## Contributing a module
 
 1. Build your module as a chezmoi-source-compatible directory at `https://github.com/<you>/<module>.git`. The contents are overlaid onto the consumer's chezmoi source dir during install.
-2. Open a PR against `sebastienrousseau/dotfiles` adding one entry to `docs/registry.json` (alphabetical by `name`).
+2. Open a PR against `YuriiF/dotfiles` adding one entry to `docs/registry.json` (alphabetical by `name`).
 3. The PR runs CI checks for:
    - Schema validity (`jq` against the JSON contract).
    - `repo` URL resolves and is a public git repo.

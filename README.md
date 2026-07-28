@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/sebastienrousseau/dotfiles/actions"><img src="https://img.shields.io/github/actions/workflow/status/sebastienrousseau/dotfiles/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build" /></a>
-  <a href="https://github.com/sebastienrousseau/dotfiles/releases/latest"><img src="https://img.shields.io/badge/Version-v0.2.511-blue?style=for-the-badge&logo=semanticrelease&logoColor=white" alt="Version" /></a>
-  <a href="https://github.com/sebastienrousseau/dotfiles/releases"><img src="https://img.shields.io/github/downloads/sebastienrousseau/dotfiles/total?style=for-the-badge&logo=github&logoColor=white" alt="Downloads" /></a>
-  <a href="https://codespaces.new/sebastienrousseau/dotfiles"><img src="https://img.shields.io/badge/Open%20in-Codespaces-blue?style=for-the-badge&logo=github&logoColor=white" alt="Open in GitHub Codespaces" /></a>
-  <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/dotfiles"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/dotfiles?style=for-the-badge&logo=linuxfoundation&logoColor=white&label=OpenSSF%20Scorecard" alt="OpenSSF Scorecard" /></a>
+  <a href="https://github.com/YuriiF/dotfiles/actions"><img src="https://img.shields.io/github/actions/workflow/status/YuriiF/dotfiles/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build" /></a>
+  <a href="https://github.com/YuriiF/dotfiles/releases/latest"><img src="https://img.shields.io/badge/Version-v0.2.511-blue?style=for-the-badge&logo=semanticrelease&logoColor=white" alt="Version" /></a>
+  <a href="https://github.com/YuriiF/dotfiles/releases"><img src="https://img.shields.io/github/downloads/YuriiF/dotfiles/total?style=for-the-badge&logo=github&logoColor=white" alt="Downloads" /></a>
+  <a href="https://codespaces.new/YuriiF/dotfiles"><img src="https://img.shields.io/badge/Open%20in-Codespaces-blue?style=for-the-badge&logo=github&logoColor=white" alt="Open in GitHub Codespaces" /></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/YuriiF/dotfiles"><img src="https://img.shields.io/ossf-scorecard/github.com/YuriiF/dotfiles?style=for-the-badge&logo=linuxfoundation&logoColor=white&label=OpenSSF%20Scorecard" alt="OpenSSF Scorecard" /></a>
   <a href="https://www.bestpractices.dev/projects/12840"><img src="https://img.shields.io/cii/level/12840?style=for-the-badge&logo=linuxfoundation&logoColor=white&label=OpenSSF%20Best%20Practices" alt="OpenSSF Best Practices" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License: MIT" /></a>
 </p>
@@ -30,7 +30,7 @@
          --idle-time-limit 1 --rows 30 --cols 100 \
          --title "Dotfiles: install → doctor → theme"
        # in the recording shell:
-       #   curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh | bash
+       #   curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh | bash
        #   dot doctor
        #   dot theme rebuild --force
        # then Ctrl-D to stop
@@ -52,7 +52,7 @@
 
 ```bash
 curl -fsSL -o /tmp/dotfiles-install.sh \
-  https://raw.githubusercontent.com/sebastienrousseau/dotfiles/v0.2.511/install.sh
+  https://raw.githubusercontent.com/YuriiF/dotfiles/v0.2.511/install.sh
 echo "d5a04c5e2813a93a63c8ecce9655cf3d107f6068862c6eba84a92cf22f801c7e  /tmp/dotfiles-install.sh" \
   | shasum -a 256 -c
 bash /tmp/dotfiles-install.sh
@@ -61,7 +61,7 @@ bash /tmp/dotfiles-install.sh
 **Trust-source one-liner** (skips the SHA check — fine for sandboxes and ephemeral CI, not recommended for primary workstations):
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
 ```
 
 Then verify and explore:
@@ -80,7 +80,7 @@ Silent install (no prompts):
 
 ```bash
 DOTFILES_SILENT=1 DOTFILES_NONINTERACTIVE=1 \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
 ```
 
 Docker sandbox:
@@ -88,7 +88,7 @@ Docker sandbox:
 ```bash
 docker run --rm -e DOTFILES_NONINTERACTIVE=1 ubuntu:24.04 bash -c \
   'apt-get update -qq && apt-get install -y -qq git curl sudo >/dev/null 2>&1 \
-  && git clone --depth 1 https://github.com/sebastienrousseau/dotfiles.git ~/.dotfiles \
+  && git clone --depth 1 https://github.com/YuriiF/dotfiles.git ~/.dotfiles \
   && bash ~/.dotfiles/install.sh \
   && export PATH="$HOME/.local/bin:$PATH" \
   && dot doctor'

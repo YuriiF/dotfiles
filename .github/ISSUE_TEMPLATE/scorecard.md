@@ -16,7 +16,7 @@ assignees: 'sebastienrousseau'
 
 ## Evidence
 
-Live dashboard: <https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/dotfiles>
+Live dashboard: <https://scorecard.dev/viewer/?uri=github.com/YuriiF/dotfiles>
 
 ```text
 <paste the relevant Scorecard JSON output for this check, including the .reason field>

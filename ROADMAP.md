@@ -2,8 +2,8 @@
 
 This roadmap describes the direction of the project. It is intentionally
 high-level; concrete, dated work is tracked in
-[GitHub Issues](https://github.com/sebastienrousseau/dotfiles/issues) and
-[Milestones](https://github.com/sebastienrousseau/dotfiles/milestones), and
+[GitHub Issues](https://github.com/YuriiF/dotfiles/issues) and
+[Milestones](https://github.com/YuriiF/dotfiles/milestones), and
 shipped changes are recorded in [`CHANGELOG.md`](CHANGELOG.md). Versioning
 follows [SemVer](https://semver.org/) with the source of truth in
 `.chezmoidata.toml`.
@@ -38,6 +38,6 @@ follows [SemVer](https://semver.org/) with the source of truth in
 ## How to influence the roadmap
 
 Open or comment on a
-[GitHub Issue](https://github.com/sebastienrousseau/dotfiles/issues), or start a
+[GitHub Issue](https://github.com/YuriiF/dotfiles/issues), or start a
 discussion. Contributions are welcome — see
 [`CONTRIBUTING.md`](CONTRIBUTING.md).

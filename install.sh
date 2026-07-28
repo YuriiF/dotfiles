@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2015-2026 Sebastien Rousseau
 # Universal Dotfiles Installer (Zero-Dependency)
-# Usage: bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+# Usage: bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
 # (or ./install.sh locally)
 
 # This installer uses bash features (set -o pipefail, arrays, [[ ]]). If it is
@@ -12,7 +12,7 @@
 # it parses in any shell before bash takes over.
 if [ -z "${BASH_VERSION:-}" ]; then
   echo "install.sh requires bash. Run:  bash install.sh" >&2
-  echo "  or:  bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)\"" >&2
+  echo "  or:  bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)\"" >&2
   exit 1
 fi
 
@@ -402,8 +402,8 @@ main() {
     printf '%b\n' "${CYAN}   SECURITY NOTE: Cloning pinned version $VERSION for supply-chain safety${NC}"
 
     # STRICT MODE: We pin to the specific tag to avoid 'main' branch drift
-    git clone --depth 1 --branch "$VERSION" https://github.com/sebastienrousseau/dotfiles.git "$SOURCE_DIR" 2>/dev/null ||
-      { git clone https://github.com/sebastienrousseau/dotfiles.git "$SOURCE_DIR" && (cd "$SOURCE_DIR" && git checkout "$VERSION"); }
+    git clone --depth 1 --branch "$VERSION" https://github.com/YuriiF/dotfiles.git "$SOURCE_DIR" 2>/dev/null ||
+      { git clone https://github.com/YuriiF/dotfiles.git "$SOURCE_DIR" && (cd "$SOURCE_DIR" && git checkout "$VERSION"); }
 
     # Verify the checkout succeeded and we're on the expected version
     ACTUAL_REF=$(

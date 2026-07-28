@@ -16,7 +16,7 @@ source "$SCRIPT_DIR/../framework/assertions.sh"
 # ── Every documented install URL must use /main/, not /master/ ─────
 
 test_start "install_urls_use_main_branch"
-stale_refs=$(grep -rn 'raw.githubusercontent.com/sebastienrousseau/dotfiles/master/' \
+stale_refs=$(grep -rn 'raw.githubusercontent.com/YuriiF/dotfiles/master/' \
   "$REPO_ROOT/README.md" \
   "$REPO_ROOT/install.sh" \
   "$REPO_ROOT/docs/guides/INSTALL.md" \
@@ -40,9 +40,9 @@ fi
 test_start "install_url_reachable"
 if command -v curl >/dev/null 2>&1; then
   main_code=$(curl -sI -o /dev/null -w '%{http_code}' \
-    "https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh" 2>/dev/null || echo "000")
+    "https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh" 2>/dev/null || echo "000")
   master_code=$(curl -sI -o /dev/null -w '%{http_code}' \
-    "https://raw.githubusercontent.com/sebastienrousseau/dotfiles/master/install.sh" 2>/dev/null || echo "000")
+    "https://raw.githubusercontent.com/YuriiF/dotfiles/master/install.sh" 2>/dev/null || echo "000")
   if [[ "$main_code" == "200" || "$master_code" == "200" ]]; then
     ((TESTS_PASSED++))
     printf '%b\n' "  ${GREEN}✓${NC} $CURRENT_TEST: install.sh reachable (main=$main_code, master=$master_code)"
@@ -83,7 +83,7 @@ fi
 test_start "bootstrap_url_consistency"
 bootstrap="$REPO_ROOT/bin/dot-bootstrap"
 if [[ -f "$bootstrap" ]]; then
-  if grep -q 'raw.githubusercontent.com/sebastienrousseau/dotfiles/main/' "$bootstrap"; then
+  if grep -q 'raw.githubusercontent.com/YuriiF/dotfiles/main/' "$bootstrap"; then
     ((TESTS_PASSED++))
     printf '%b\n' "  ${GREEN}✓${NC} $CURRENT_TEST: bootstrap uses /main/ branch URL"
   else

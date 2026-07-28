@@ -55,7 +55,7 @@ cd_aliases_help() {
     echo ""
   fi
   echo "For updates and more information, visit:"
-  echo "  https://github.com/sebastienrousseau/dotfiles"
+  echo "  https://github.com/YuriiF/dotfiles"
 }
 
 # Version information

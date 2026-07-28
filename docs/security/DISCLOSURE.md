@@ -6,7 +6,7 @@ sensitive details (PII, exploit chains, internal infrastructure) in
 transit or at rest on third-party servers.
 
 If your report doesn't need encryption, please use
-[GitHub Security Advisories](https://github.com/sebastienrousseau/dotfiles/security/advisories)
+[GitHub Security Advisories](https://github.com/YuriiF/dotfiles/security/advisories)
 instead — it's faster and the GitHub-side audit trail is stronger.
 
 ## 1. Fetch the maintainer's public key
@@ -34,13 +34,13 @@ gpg --fingerprint security@sebastienrousseau.com
 ```
 
 The fingerprint must match the one published in
-[`.github/SECURITY.md`](https://github.com/sebastienrousseau/dotfiles/blob/main/.github/SECURITY.md). Cross-verify
+[`.github/SECURITY.md`](https://github.com/YuriiF/dotfiles/blob/main/.github/SECURITY.md). Cross-verify
 against the SSH signing key in `dot_config/git/allowed_signers.tmpl`
 — the maintainer signs commits with the same identity, so both
 fingerprints derive from the same identity claim.
 
 If the two fingerprints don't match, **stop**. Open a private
-[Security Advisory](https://github.com/sebastienrousseau/dotfiles/security/advisories/new)
+[Security Advisory](https://github.com/YuriiF/dotfiles/security/advisories/new)
 and ask the maintainer to confirm the key out-of-band.
 
 ## 3. Encrypt your report
@@ -75,7 +75,7 @@ subjects in plain text).
 ## 5. Acknowledgement
 
 You should receive an acknowledgement within the SLA in
-[`.github/SECURITY.md`](https://github.com/sebastienrousseau/dotfiles/blob/main/.github/SECURITY.md):
+[`.github/SECURITY.md`](https://github.com/YuriiF/dotfiles/blob/main/.github/SECURITY.md):
 
 | Severity | Initial response |
 |---|---|
@@ -122,7 +122,7 @@ The maintainer commits to:
 
 ## See also
 
-- [`.github/SECURITY.md`](https://github.com/sebastienrousseau/dotfiles/blob/main/.github/SECURITY.md) — policy
+- [`.github/SECURITY.md`](https://github.com/YuriiF/dotfiles/blob/main/.github/SECURITY.md) — policy
   overview + fingerprint.
 - [`docs/security/KEY_ROTATION.md`](KEY_ROTATION.md) — schedule for
   when the disclosure key is rotated.

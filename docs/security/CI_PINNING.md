@@ -8,9 +8,9 @@ Every external dependency the CI pipeline consumes must be pinned by
 40-hex commit SHA. The policy applies to:
 
 1. **Third-party actions** — `uses: owner/action@<sha>` (already enforced via Scorecard's `Pinned-Dependencies` check at score ≥ 9).
-2. **Reusable workflows in this repo** — `uses: sebastienrousseau/dotfiles/.github/workflows/reusable-X.yml@<sha>` (added with [#855](https://github.com/sebastienrousseau/dotfiles/issues/855); enforced by `tools/ci/lint-reusable-pins.sh`).
-3. **Container base images** — `FROM image:tag@sha256:<digest>` (closed by [#886](https://github.com/sebastienrousseau/dotfiles/pull/886)).
-4. **Release binaries downloaded at build time** — `curl … && echo "<sha256> ..." | sha256sum -c` (closed by [#888](https://github.com/sebastienrousseau/dotfiles/pull/888)).
+2. **Reusable workflows in this repo** — `uses: YuriiF/dotfiles/.github/workflows/reusable-X.yml@<sha>` (added with [#855](https://github.com/YuriiF/dotfiles/issues/855); enforced by `tools/ci/lint-reusable-pins.sh`).
+3. **Container base images** — `FROM image:tag@sha256:<digest>` (closed by [#886](https://github.com/YuriiF/dotfiles/pull/886)).
+4. **Release binaries downloaded at build time** — `curl … && echo "<sha256> ..." | sha256sum -c` (closed by [#888](https://github.com/YuriiF/dotfiles/pull/888)).
 
 ## Why SHA-pin reusable workflows
 
@@ -29,7 +29,7 @@ site — visible in the PR diff, reviewable, revertible.
 
 ```yaml
 # Acceptable — full SHA pin.
-uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@b0615f8fb5c0f3826f58904a5567eff11b6c500e # main
+uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@b0615f8fb5c0f3826f58904a5567eff11b6c500e # main
 ```
 
 The trailing comment is a human-readable hint at what the SHA
@@ -44,10 +44,10 @@ GitHub uses.
 uses: ./.github/workflows/reusable-shell-lint.yml
 
 # Rejected — branch ref is mutable.
-uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@main
+uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@main
 
 # Rejected — tag ref is mutable (tags can be moved).
-uses: sebastienrousseau/dotfiles/.github/workflows/reusable-shell-lint.yml@v0.2.501
+uses: YuriiF/dotfiles/.github/workflows/reusable-shell-lint.yml@v0.2.501
 ```
 
 The `lint-reusable-pins` job in `ci.yml` runs `tools/ci/lint-reusable-pins.sh`
@@ -114,7 +114,7 @@ merge time.
 
 ## See also
 
-- [#855](https://github.com/sebastienrousseau/dotfiles/issues/855) — original tracking issue.
+- [#855](https://github.com/YuriiF/dotfiles/issues/855) — original tracking issue.
 - `tools/ci/lint-reusable-pins.sh` — the enforcement script.
 - `tests/unit/ci/test_reusable_pin_lint.sh` — the negative test.
 - `.github/workflows/bump-reusable-pins.yml` — the auto-bump bot.

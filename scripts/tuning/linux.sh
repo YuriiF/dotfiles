@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2015-2026 Sebastien Rousseau
 # Linux System Tuning (opt-in)
-# Managed by chezmoi - https://github.com/sebastienrousseau/dotfiles
+# Managed by chezmoi - https://github.com/YuriiF/dotfiles
 #
 # Usage: DOTFILES_TUNING=1 DOTFILES_PROFILE=laptop ./linux.sh
 # Profiles: laptop, desktop, server
@@ -148,7 +148,7 @@ ui_header "Persisting sysctl settings"
 if command -v sudo >/dev/null; then
   sudo tee /etc/sysctl.d/99-dotfiles.conf >/dev/null <<'EOF'
 # Dotfiles system tuning - auto-generated
-# https://github.com/sebastienrousseau/dotfiles
+# https://github.com/YuriiF/dotfiles
 
 # File system
 fs.inotify.max_user_watches = 524288

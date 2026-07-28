@@ -14,7 +14,7 @@ date: 2026-07-05
 
 The AI-augmented developer opens a terminal dozens of times a day. In fleets running Claude Code, Codex CLI, GitHub Copilot CLI, or agentic frameworks that spawn subshells for every tool call, shell startup latency stops being a personal-comfort metric and becomes a **platform-engineering signal**.
 
-The [.dotfiles reference framework](https://github.com/sebastienrousseau/dotfiles) treats sub-second shell startup as an SLO alongside SLSA-signed releases and MCP boundary enforcement. When a shell exceeds its budget, the framework's `dot health` command reports it as a failing check, not a warning — because a slow prompt on a workstation running 18 concurrent AI agents is a supply-chain-throughput problem, not an aesthetic one.
+The [.dotfiles reference framework](https://github.com/YuriiF/dotfiles) treats sub-second shell startup as an SLO alongside SLSA-signed releases and MCP boundary enforcement. When a shell exceeds its budget, the framework's `dot health` command reports it as a failing check, not a warning — because a slow prompt on a workstation running 18 concurrent AI agents is a supply-chain-throughput problem, not an aesthetic one.
 
 This article walks through the diagnosis and fix that took Fish cold-start latency from **231 ms → 119 ms** — a 48% reduction — on a workstation carrying ~900 bridged bash aliases into Fish for cross-shell parity. The remediation is a one-line change to a code-generation printf statement, plus a chezmoi hook that moves the cost out of the interactive path.
 
@@ -150,4 +150,4 @@ The stronger case is qualitative. Interactive-latency perception is nonlinear: a
 
 4. **Version the cache format itself, not just the source.** The staleness check should include a format marker so upgrading users don't inherit stale caches by mtime luck.
 
-The reference implementation lives on `main` at [sebastienrousseau/dotfiles](https://github.com/sebastienrousseau/dotfiles); the change landed as [PR #963](https://github.com/sebastienrousseau/dotfiles/pull/963) and [PR #964](https://github.com/sebastienrousseau/dotfiles/pull/964), shipped in [v0.2.510](https://github.com/sebastienrousseau/dotfiles/releases/tag/v0.2.510).
+The reference implementation lives on `main` at [YuriiF/dotfiles](https://github.com/YuriiF/dotfiles); the change landed as [PR #963](https://github.com/YuriiF/dotfiles/pull/963) and [PR #964](https://github.com/YuriiF/dotfiles/pull/964), shipped in [v0.2.510](https://github.com/YuriiF/dotfiles/releases/tag/v0.2.510).

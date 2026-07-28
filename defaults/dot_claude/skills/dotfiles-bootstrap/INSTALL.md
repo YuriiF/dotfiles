@@ -1,6 +1,6 @@
 # Installing the `dotfiles-bootstrap` Claude Code skill
 
-This skill ships with the `sebastienrousseau/dotfiles` framework. There are two ways to make it visible to your Claude Code session.
+This skill ships with the `YuriiF/dotfiles` framework. There are two ways to make it visible to your Claude Code session.
 
 ## Option 1 — You already use this framework
 
@@ -12,7 +12,7 @@ Drop the skill directory into your global Claude Code skills path:
 
 ```bash
 mkdir -p ~/.claude/skills
-curl -fsSL https://github.com/sebastienrousseau/dotfiles/archive/refs/heads/main.tar.gz \
+curl -fsSL https://github.com/YuriiF/dotfiles/archive/refs/heads/main.tar.gz \
   | tar -xz -C /tmp
 cp -r /tmp/dotfiles-main/dot_claude/skills/dotfiles-bootstrap \
       ~/.claude/skills/
@@ -53,4 +53,4 @@ This skill calls `dot init`, which calls `chezmoi init`, which runs the target r
 
 ## Reporting issues
 
-[`github.com/sebastienrousseau/dotfiles/issues`](https://github.com/sebastienrousseau/dotfiles/issues) — tag with `skill:dotfiles-bootstrap`.
+[`github.com/YuriiF/dotfiles/issues`](https://github.com/YuriiF/dotfiles/issues) — tag with `skill:dotfiles-bootstrap`.

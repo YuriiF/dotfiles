@@ -73,7 +73,7 @@ purpose, contributors orient in under 30 seconds.
 
 ### G — OpenSSF Scorecard 10/10 across every check
 
-Target the [public Scorecard report](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/dotfiles) and drive every check to 10/10:
+Target the [public Scorecard report](https://scorecard.dev/viewer/?uri=github.com/YuriiF/dotfiles) and drive every check to 10/10:
 
 | Check | Today (baseline) | Path to 10 |
 |---|---|---|
@@ -130,5 +130,5 @@ These will land in v0.2.503 as a coordinated single PR with a
 - [ ] `dot env list` / `dot agents list` / `dot registry list` render with gorgeous gum tables (already done — bake into screenshot for README).
 - [ ] `windows-latest` is in the regular test matrix.
 - [ ] Pre-existing CI infrastructure failures (SLSA, etc.) stay green after the v0.2.502 fix series.
-- [ ] **OpenSSF Scorecard reports 10/10 on every applicable check** at <https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/dotfiles>.
+- [ ] **OpenSSF Scorecard reports 10/10 on every applicable check** at <https://scorecard.dev/viewer/?uri=github.com/YuriiF/dotfiles>.
 - [ ] OpenSSF Best Practices badge displayed in README.

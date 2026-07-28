@@ -38,7 +38,7 @@
 		},
 		"codespaces": {
 			"repositories": {
-				"sebastienrousseau/dotfiles": {
+				"YuriiF/dotfiles": {
 					"permissions": {
 						"contents": "read"
 					}

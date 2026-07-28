@@ -14,14 +14,14 @@ requires:
   - chezmoi >= 2.47
   - bash >= 4.0
   - git
-homepage: https://github.com/sebastienrousseau/dotfiles
+homepage: https://github.com/YuriiF/dotfiles
 docs: https://doc.dotfiles.io/manual/
 ---
 
 # dotfiles-bootstrap
 
 Provision a new workstation from a public dotfiles repository through
-the [`sebastienrousseau/dotfiles`](https://github.com/sebastienrousseau/dotfiles) harness.
+the [`YuriiF/dotfiles`](https://github.com/YuriiF/dotfiles) harness.
 
 This skill is for Claude Code to invoke `dot init <user>` on the user's behalf — most useful when the user says "set me up like Alice" or "bootstrap a fresh laptop using my GitHub dotfiles."
 
@@ -79,6 +79,6 @@ Closes the round-1 audit's adoption gap "bootstrap a foreign dotfiles repo throu
 
 ## References
 
-- `dot init` source: [`scripts/dot/commands/init.sh`](https://github.com/sebastienrousseau/dotfiles/blob/main/scripts/dot/commands/init.sh)
-- Roadmap entry: [ROADMAP_2026 §B2](https://github.com/sebastienrousseau/dotfiles/blob/main/docs/operations/ROADMAP_2026.md)
+- `dot init` source: [`scripts/dot/commands/init.sh`](https://github.com/YuriiF/dotfiles/blob/main/scripts/dot/commands/init.sh)
+- Roadmap entry: [ROADMAP_2026 §B2](https://github.com/YuriiF/dotfiles/blob/main/docs/operations/ROADMAP_2026.md)
 - AGENTS.md / CLAUDE.md sync: `dot agents render`

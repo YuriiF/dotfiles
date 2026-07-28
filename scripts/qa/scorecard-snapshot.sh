@@ -38,7 +38,7 @@ for arg in "$@"; do
   esac
 done
 
-api='https://api.scorecard.dev/projects/github.com/sebastienrousseau/dotfiles'
+api='https://api.scorecard.dev/projects/github.com/YuriiF/dotfiles'
 target='docs/security/SCORECARD.md'
 
 [[ -f "$target" ]] || {

@@ -19,7 +19,7 @@ source "$SCRIPT_DIR/../framework/assertions.sh"
 
 test_start "readme_install_url_valid"
 # Install URL must point to install.sh on main
-assert_file_contains "$REPO_ROOT/README.md" "raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh" "README install URL must reference main/install.sh"
+assert_file_contains "$REPO_ROOT/README.md" "raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh" "README install URL must reference main/install.sh"
 
 test_start "readme_dot_doctor_exists"
 assert_file_contains "$REPO_ROOT/README.md" "dot doctor" "README must reference dot doctor"

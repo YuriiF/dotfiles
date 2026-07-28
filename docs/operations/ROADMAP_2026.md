@@ -101,7 +101,7 @@ The combination of Codex Windows GA (2026-03-04, 500k waitlist → 2M WAU in 4 w
 2. PR against [`mise-en-place/registry`](https://github.com/mise-en-place/registry) adding the plugin entry.
 3. Co-marketing post on `mise.jdx.dev/blog` ("Bootstrap any dotfiles repo with `mise install dot@user/repo`"). Reach out to Jeff Dickey on GitHub Discussions.
 
-**Acceptance.** `mise install dot@sebastienrousseau/dotfiles` bootstraps a clean machine successfully.
+**Acceptance.** `mise install dot@YuriiF/dotfiles` bootstraps a clean machine successfully.
 
 **Files.** External repo `mise-plugin-dot/`; PR against `mise-en-place/registry`; new section in this repo's `README.md` linking the plugin.
 
@@ -470,7 +470,7 @@ The §3 wave shipped in an hour with AI assist; what we don't yet have is **evid
 
 **Sketch.** Lift the `dot.env.toml` schema (from C3) into a candidate spec:
 
-1. Move `docs/schema/dot-env-v1.json` to a top-level repo: `sebastienrousseau/dotfiles-manifest-spec`.
+1. Move `docs/schema/dot-env-v1.json` to a top-level repo: `YuriiF/dotfiles-manifest-spec`.
 2. Open an AAIF candidate-spec discussion at [agentic-ai-foundation/community](https://github.com/agentic-ai-foundation/community).
 3. Make `dot apply` consume the manifest as canonical input; Go templates become an implementation detail.
 
@@ -558,7 +558,7 @@ The §3 wave shipped in an hour with AI assist; what we don't yet have is **evid
 2. Submit to [containers.dev community features registry](https://containers.dev/features).
 3. Add a `.devcontainer/devcontainer.json` example to the main repo showing how to consume it.
 
-**Acceptance.** A Codespace launched with `"features": { "ghcr.io/sebastienrousseau/dotfiles:1": {} }` boots with the maintainer's dotfiles applied.
+**Acceptance.** A Codespace launched with `"features": { "ghcr.io/YuriiF/dotfiles:1": {} }` boots with the maintainer's dotfiles applied.
 
 ### F10 — Claude Code Marketplace listing — **0.5 P-d**
 

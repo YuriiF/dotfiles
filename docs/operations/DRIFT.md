@@ -7,7 +7,7 @@ render_with_liquid: false
 This page documents how this repo detects drift between the chezmoi
 source-of-truth and what's actually deployed on a host, how to read
 the report, and how to remediate. Managed under
-[#875](https://github.com/sebastienrousseau/dotfiles/issues/875).
+[#875](https://github.com/YuriiF/dotfiles/issues/875).
 
 ## What "drift" means here
 
@@ -104,4 +104,4 @@ report exists rather than just `chezmoi status`.
 - `.github/workflows/drift-detection.yml` — the nightly scanner.
 - `tests/unit/diagnostics/test_drift_dashboard.sh` — JSON contract test.
 - `dot heal` / `dot rollback` — drift remediation commands.
-- Issue [#875](https://github.com/sebastienrousseau/dotfiles/issues/875).
+- Issue [#875](https://github.com/YuriiF/dotfiles/issues/875).

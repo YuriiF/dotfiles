@@ -153,7 +153,7 @@ dot_env_emit() {
         emitter: {
           name: "dot env emit",
           version: $ev,
-          repo: "github.com/sebastienrousseau/dotfiles"
+          repo: "github.com/YuriiF/dotfiles"
         },
         host: {
           hostname: $host,
