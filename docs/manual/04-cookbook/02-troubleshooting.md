@@ -17,7 +17,7 @@ Symptom → cause → fix.
 
 ```sh
 export PATH="$HOME/.local/bin:$PATH"
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
 ```
 
 ### Symptom: "could not create directory ~/.local/share/chezmoi"
@@ -332,7 +332,7 @@ bash examples/example-coverage-gate.sh
 
 1. Check [FAQ](03-faq.md)
 2. Read the relevant [concept chapter](../01-concepts/)
-3. Open an issue: <https://github.com/sebastienrousseau/dotfiles/issues>
+3. Open an issue: <https://github.com/YuriiF/dotfiles/issues>
 
 When filing an issue, include:
 

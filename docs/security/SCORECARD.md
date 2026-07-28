@@ -38,7 +38,7 @@ Aggregate score **7.6 / 10** at 2026-05-17T08:11:51Z.
 *Refresh: `scripts/qa/scorecard-snapshot.sh` · CI check: `lint/scorecard-snapshot` (planned).*
 <!-- END scorecard-snapshot -->
 
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/sebastienrousseau/dotfiles/badge)](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/dotfiles)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/YuriiF/dotfiles/badge)](https://scorecard.dev/viewer/?uri=github.com/YuriiF/dotfiles)
 
 The badge above is regenerated every Monday at 06:00 UTC and on every
 push to `main` by `.github/workflows/scorecard.yml`. The SARIF
@@ -71,7 +71,7 @@ marks reflect this repo's posture at the time of writing — the
 | Dependency-Update-Tool | ✓ | Dependabot configured for github-actions / npm / docker / devcontainers / uv. |
 | Fuzzing | ⚠ | `install.sh` fuzz harness lives under `tests/fuzz/` (closes #881), but it's shell-based and Scorecard's heuristic only recognizes OSS-Fuzz / ClusterFuzzLite / native Go fuzz / libFuzzer / Atheris. None support shell. Property tests under `tests/unit/functions/test_property_*.sh` cover the closest equivalent surface. |
 | License | ✓ | MIT at repo root (`LICENSE`). |
-| Maintained | ✓ | Active commit cadence; the [README](https://github.com/sebastienrousseau/dotfiles/blob/main/README.md) lists the current `dotfiles_version`. |
+| Maintained | ✓ | Active commit cadence; the [README](https://github.com/YuriiF/dotfiles/blob/main/README.md) lists the current `dotfiles_version`. |
 | Pinned-Dependencies | ⚠ | Closed 8 of 14 findings this cycle (every Dockerfile base + every workflow action + 2 `curl \| sh` installers + the `npm install -g npm` upgrade step). 5 residual findings stay open by design — see `Open findings`. |
 | SAST | ✓ | CodeQL (`.github/workflows/codeql.yml`) + Checkov + Grype. |
 | SBOM | ✓ | Generated per PR by `sbom-diff.yml` and per release by `security-release.yml`. |
@@ -88,7 +88,7 @@ marks reflect this repo's posture at the time of writing — the
 ## Open findings
 
 The eight items below are surfaced as alerts at
-<https://github.com/sebastienrousseau/dotfiles/security/code-scanning>.
+<https://github.com/YuriiF/dotfiles/security/code-scanning>.
 Each row gives the dismissal **reason** and the exact **comment text**
 to paste when triaging.
 
@@ -150,11 +150,11 @@ workflow already wires this up — only the secret needs to be created.
 Steps (one-time, repo owner):
 
 1. Go to <https://github.com/settings/personal-access-tokens/new>
-2. **Resource owner**: `sebastienrousseau` · **Repository access**: only `sebastienrousseau/dotfiles`
+2. **Resource owner**: `sebastienrousseau` · **Repository access**: only `YuriiF/dotfiles`
 3. **Repository permissions** → `Administration: read-only` and `Metadata: read-only`
 4. **Expiration**: 1 year (set a calendar reminder to rotate; document the rotation in this file when done)
 5. Generate the token, copy it once
-6. Add as a secret named `SCORECARD_TOKEN` at <https://github.com/sebastienrousseau/dotfiles/settings/secrets/actions/new>
+6. Add as a secret named `SCORECARD_TOKEN` at <https://github.com/YuriiF/dotfiles/settings/secrets/actions/new>
 7. Next Scorecard run (manual via `gh workflow run scorecard.yml` or weekly cron) picks it up automatically
 8. Expected effect: `Branch-Protection` `-1` → 10/10 if all rules are correctly configured; `Webhooks` `-1` → 10/10 (no webhooks present).
 
@@ -176,7 +176,7 @@ If you add an exception, include the check name, an expiry date
 
 ```bash
 # Re-count open alerts:
-gh api 'repos/sebastienrousseau/dotfiles/code-scanning/alerts?state=open&per_page=50' \
+gh api 'repos/YuriiF/dotfiles/code-scanning/alerts?state=open&per_page=50' \
   --jq '[.[].rule.id] | group_by(.) | map({rule: .[0], count: length})'
 
 # Trigger Scorecard manually:
@@ -192,4 +192,4 @@ remediation closes one of the rows above, delete the row.
   `analysis` + `track-regression` jobs per #885).
 - [Scorecard project](https://github.com/ossf/scorecard).
 - [Scorecard checks reference](https://github.com/ossf/scorecard/blob/main/docs/checks.md).
-- Tracking issue [#869](https://github.com/sebastienrousseau/dotfiles/issues/869).
+- Tracking issue [#869](https://github.com/YuriiF/dotfiles/issues/869).

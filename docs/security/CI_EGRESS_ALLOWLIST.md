@@ -7,7 +7,7 @@ render_with_liquid: false
 This page documents the network endpoints CI jobs are allowed to
 reach when `step-security/harden-runner` is operating in `block`
 mode. Managed under
-[#878](https://github.com/sebastienrousseau/dotfiles/issues/878).
+[#878](https://github.com/YuriiF/dotfiles/issues/878).
 
 ## Status
 
@@ -124,4 +124,4 @@ Whenever a job is flipped to `block` mode:
 
 - `step-security/harden-runner` — [https://github.com/step-security/harden-runner](https://github.com/step-security/harden-runner)
 - `docs/security/SCORECARD.md` — Token-Permissions check ties to harden-runner adoption.
-- Issue [#878](https://github.com/sebastienrousseau/dotfiles/issues/878).
+- Issue [#878](https://github.com/YuriiF/dotfiles/issues/878).

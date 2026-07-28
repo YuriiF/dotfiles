@@ -8,7 +8,7 @@ This page documents the repo-local composite actions under
 `.github/actions/`. These exist so the most-repeated CI setup blocks
 have one canonical implementation, one cache key shape, and one place
 to bump pins. Managed under
-[#879](https://github.com/sebastienrousseau/dotfiles/issues/879).
+[#879](https://github.com/YuriiF/dotfiles/issues/879).
 
 ## Available actions
 
@@ -153,4 +153,4 @@ bump on a weekly schedule.
 - `.github/actions/setup-mise/action.yml`
 - `tools/ci/install-chezmoi-verified.sh` — the SHA-pinned installer
   the chezmoi composite prefers when available.
-- Issue [#879](https://github.com/sebastienrousseau/dotfiles/issues/879).
+- Issue [#879](https://github.com/YuriiF/dotfiles/issues/879).

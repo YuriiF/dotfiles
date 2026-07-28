@@ -21,7 +21,7 @@ Goal: all three running identical `.dotfiles` with per-host customization, with 
 On each new host:
 
 ```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
 ```
 
 During `chezmoi init`, answer with the host's preset:

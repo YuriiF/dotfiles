@@ -9,7 +9,7 @@ pushing.
 
 ## Why
 
-Closes [#853](https://github.com/sebastienrousseau/dotfiles/issues/853).
+Closes [#853](https://github.com/YuriiF/dotfiles/issues/853).
 Local hooks alone are bypassable — `git commit --no-verify`,
 `git push --no-verify`, or unsetting `DOTFILES_ALLOW_UNSKIPPED_PUSH`
 all let an unsigned commit reach a remote if GitHub-side enforcement

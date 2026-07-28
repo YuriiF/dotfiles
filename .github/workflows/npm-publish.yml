@@ -56,9 +56,9 @@ jobs:
       # to this workflow run. No NPM_TOKEN required.
       #
       # Configured on npmjs.com:
-      #   Package "@sebastienrousseau/dotfiles" -> Settings ->
+      #   Package "@YuriiF/dotfiles" -> Settings ->
       #   Trusted publishing -> Publisher = GitHub Actions,
-      #   Repository = sebastienrousseau/dotfiles,
+      #   Repository = YuriiF/dotfiles,
       #   Workflow = .github/workflows/npm-publish.yml.
       - name: Publish to npm
         run: npm publish --access public --provenance
@@ -97,7 +97,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           version=$(node -p 'require("./package.json").version')
-          existing=$(npm view "@sebastienrousseau/dotfiles@${version}" version --registry=https://npm.pkg.github.com 2>/dev/null || true)
+          existing=$(npm view "@YuriiF/dotfiles@${version}" version --registry=https://npm.pkg.github.com 2>/dev/null || true)
           if [[ -n "$existing" ]]; then
             echo "exists=true" >> "$GITHUB_OUTPUT"
             echo "Version ${version} already on GPR; skipping publish."

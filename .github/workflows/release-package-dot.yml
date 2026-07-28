@@ -131,7 +131,7 @@ jobs:
 
       # SLSA build provenance for the release artefacts. Keyless via OIDC
       # (Fulcio + Rekor); verify with `gh attestation verify dot-<v>.tar.gz
-      # --repo sebastienrousseau/dotfiles`. Complements the Cosign-signed
+      # --repo YuriiF/dotfiles`. Complements the Cosign-signed
       # SBOM + asset manifest in security-release.yml.
       - name: Attest build provenance (SLSA)
         uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1

@@ -129,7 +129,7 @@ Version changes in `package.json` automatically trigger synchronization:
 
 ```json
 {
-  "name": "@sebastienrousseau/dotfiles",
+  "name": "@YuriiF/dotfiles",
   "version": "0.2.485",  // Changes here trigger sync
   "scripts": {
     "version-sync": "./scripts/version-sync.sh",

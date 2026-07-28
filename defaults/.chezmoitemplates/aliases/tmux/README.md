@@ -61,7 +61,7 @@ Convenient aliases for tmux operations:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sebastienrousseau/dotfiles.git ~/.dotfiles
+   git clone https://github.com/YuriiF/dotfiles.git ~/.dotfiles
    ```
 
 2. Run the installation script:

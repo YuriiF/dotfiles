@@ -1,7 +1,7 @@
 {
   "version": "0.2.503",
   "description": "Declarative dotfiles CLI for macOS, Linux, WSL, and PowerShell.",
-  "homepage": "https://github.com/sebastienrousseau/dotfiles",
+  "homepage": "https://github.com/YuriiF/dotfiles",
   "license": "MIT",
   "depends": ["chezmoi"],
   "suggest": {
@@ -10,12 +10,12 @@
   },
   "architecture": {
     "64bit": {
-      "url": "https://github.com/sebastienrousseau/dotfiles/releases/download/v0.2.503/dot-0.2.503.zip",
+      "url": "https://github.com/YuriiF/dotfiles/releases/download/v0.2.503/dot-0.2.503.zip",
       "hash": "sha256:PLACEHOLDER_FILL_ON_v0.2.503_PUBLICATION",
       "extract_dir": "dot-0.2.503"
     },
     "arm64": {
-      "url": "https://github.com/sebastienrousseau/dotfiles/releases/download/v0.2.503/dot-0.2.503.zip",
+      "url": "https://github.com/YuriiF/dotfiles/releases/download/v0.2.503/dot-0.2.503.zip",
       "hash": "sha256:PLACEHOLDER_FILL_ON_v0.2.503_PUBLICATION",
       "extract_dir": "dot-0.2.503"
     }
@@ -25,11 +25,11 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://github.com/sebastienrousseau/dotfiles/releases/download/v$version/dot-$version.zip",
+        "url": "https://github.com/YuriiF/dotfiles/releases/download/v$version/dot-$version.zip",
         "extract_dir": "dot-$version"
       },
       "arm64": {
-        "url": "https://github.com/sebastienrousseau/dotfiles/releases/download/v$version/dot-$version.zip",
+        "url": "https://github.com/YuriiF/dotfiles/releases/download/v$version/dot-$version.zip",
         "extract_dir": "dot-$version"
       }
     }

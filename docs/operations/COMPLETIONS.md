@@ -6,7 +6,7 @@ render_with_liquid: false
 
 This page documents how zsh completion compilation works in this repo
 and how to force a rebuild. Managed under
-[#864](https://github.com/sebastienrousseau/dotfiles/issues/864).
+[#864](https://github.com/YuriiF/dotfiles/issues/864).
 
 ## The Pieces
 
@@ -116,8 +116,8 @@ their lifecycle.
 
 ## References
 
-- [`dot_config/zsh/rc.d/30-options.zsh.tmpl`](https://github.com/sebastienrousseau/dotfiles/blob/main/defaults/dot_config/zsh/rc.d/30-options.zsh.tmpl) — the deferred-compinit logic.
-- [`run_onchange_after_zcompile-completions.sh.tmpl`](https://github.com/sebastienrousseau/dotfiles/blob/main/defaults/run_onchange_after_zcompile-completions.sh.tmpl) — the apply-time precompile hook.
+- [`dot_config/zsh/rc.d/30-options.zsh.tmpl`](https://github.com/YuriiF/dotfiles/blob/main/defaults/dot_config/zsh/rc.d/30-options.zsh.tmpl) — the deferred-compinit logic.
+- [`run_onchange_after_zcompile-completions.sh.tmpl`](https://github.com/YuriiF/dotfiles/blob/main/defaults/run_onchange_after_zcompile-completions.sh.tmpl) — the apply-time precompile hook.
 - [`zsh` completion docs](https://zsh.sourceforge.io/Doc/Release/Completion-System.html).
 - ADR-002 (Shell Performance Optimization).
-- Issue [#864](https://github.com/sebastienrousseau/dotfiles/issues/864).
+- Issue [#864](https://github.com/YuriiF/dotfiles/issues/864).

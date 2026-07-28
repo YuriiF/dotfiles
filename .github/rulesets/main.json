@@ -1,5 +1,5 @@
 {
-  "_comment": "Rulesets-as-code for the `main` branch. Apply via:  gh api -X POST repos/sebastienrousseau/dotfiles/rulesets --input .github/rulesets/main.json  (or PATCH /rulesets/<id> to update an existing one). The descriptive `branch-protection-config.json` sibling captures the same intent in human-readable form; this file is the machine spec consumed by the GitHub API. See #857 + #853.",
+  "_comment": "Rulesets-as-code for the `main` branch. Apply via:  gh api -X POST repos/YuriiF/dotfiles/rulesets --input .github/rulesets/main.json  (or PATCH /rulesets/<id> to update an existing one). The descriptive `branch-protection-config.json` sibling captures the same intent in human-readable form; this file is the machine spec consumed by the GitHub API. See #857 + #853.",
   "name": "main-protection",
   "target": "branch",
   "enforcement": "active",

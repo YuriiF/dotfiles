@@ -78,7 +78,7 @@ Key rotation policy and history are in
 
 Please use GitHub Security Advisories for private disclosure:
 
-- <https://github.com/sebastienrousseau/dotfiles/security/advisories>
+- <https://github.com/YuriiF/dotfiles/security/advisories>
 
 We'll acknowledge reports and provide a fix timeline when possible.
 

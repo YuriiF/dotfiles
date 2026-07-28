@@ -137,7 +137,7 @@ Yes — but your cold shell startup will be slow. Remove the prewarm invocation 
 
 ### Where do I report bugs?
 
-GitHub issues: <https://github.com/sebastienrousseau/dotfiles/issues>. Include output of `dot doctor --json` and your platform.
+GitHub issues: <https://github.com/YuriiF/dotfiles/issues>. Include output of `dot doctor --json` and your platform.
 
 ### Where do I ask usage questions?
 
@@ -172,4 +172,4 @@ A GUI adds complexity without benefit over editing `.chezmoidata.toml` directly.
 
 - [Troubleshooting](02-troubleshooting.md)
 - [Recipes](01-recipes.md)
-- [GitHub Discussions](https://github.com/sebastienrousseau/dotfiles/discussions)
+- [GitHub Discussions](https://github.com/YuriiF/dotfiles/discussions)

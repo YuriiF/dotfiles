@@ -72,7 +72,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          owner_repo="${GITHUB_REPOSITORY}"  # sebastienrousseau/dotfiles
+          owner_repo="${GITHUB_REPOSITORY}"  # YuriiF/dotfiles
           changes=0
           summary=""
 

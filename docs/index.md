@@ -15,7 +15,7 @@ render_with_liquid: false
 
 <div class="buttons">
   <a class="primary" href="guides/INSTALL/">Install →</a>
-  <a href="https://github.com/sebastienrousseau/dotfiles">GitHub</a>
+  <a href="https://github.com/YuriiF/dotfiles">GitHub</a>
   <a href="reference/UTILS/">Utilities</a>
   <a href="architecture/ARCHITECTURE/">Architecture</a>
 </div>
@@ -99,13 +99,13 @@ Install onto a fresh machine:
 === "macOS / Linux / WSL"
 
     ```bash
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
     ```
 
 === "Windows (PowerShell 7+)"
 
     ```powershell
-    iwr -useb https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.ps1 | iex
+    iwr -useb https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.ps1 | iex
     ```
 
 Once installed:
@@ -128,5 +128,5 @@ Once installed:
 
 ## Current release
 
-- Release feed: [GitHub releases](https://github.com/sebastienrousseau/dotfiles/releases/latest)
-- Source: [sebastienrousseau/dotfiles](https://github.com/sebastienrousseau/dotfiles)
+- Release feed: [GitHub releases](https://github.com/YuriiF/dotfiles/releases/latest)
+- Source: [YuriiF/dotfiles](https://github.com/YuriiF/dotfiles)

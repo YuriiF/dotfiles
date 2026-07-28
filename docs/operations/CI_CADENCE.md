@@ -6,7 +6,7 @@ render_with_liquid: false
 
 This page tabulates every GitHub Actions workflow in `.github/workflows/`
 with its trigger cadence and the rationale for that cadence. Maintained
-under [issue #861](https://github.com/sebastienrousseau/dotfiles/issues/861).
+under [issue #861](https://github.com/YuriiF/dotfiles/issues/861).
 
 ## Cadence rules
 
@@ -34,7 +34,7 @@ that bar; see "Why no daily jobs" below.
 | `cross-platform-test.yml` | event + schedule | Sun 07:00 (weekly) | Validates BSD vs GNU tool divergence on every PR; weekly catches GitHub-hosted-runner image updates. |
 | `devcontainer-prebuild.yml` | event + schedule | Mon 03:00 (weekly) | Pre-build the devcontainer image weekly so first `Open in Codespaces` is fast. |
 | `manual-publish.yml` | manual only | — | Release-trigger flow; never scheduled. |
-| `nightly.yml` | schedule + manual | **Sun 02:00 (weekly)** | Was daily; flipped to weekly under [#861](https://github.com/sebastienrousseau/dotfiles/issues/861). Jobs (beta-tool detection, extended OS matrix on macos-15-intel/macos-14, dependency-report) don't need daily cadence. |
+| `nightly.yml` | schedule + manual | **Sun 02:00 (weekly)** | Was daily; flipped to weekly under [#861](https://github.com/YuriiF/dotfiles/issues/861). Jobs (beta-tool detection, extended OS matrix on macos-15-intel/macos-14, dependency-report) don't need daily cadence. |
 | `npm-publish.yml` | release tag | — | Trigger: `push` of a version tag. |
 | `policy-bundle-release.yml` | manual + release | — | Manual / release-trigger only. |
 | `pr-signature.yml` | pull_request | — | Verifies PR description has the branding signature. |
@@ -102,6 +102,6 @@ When adding a new workflow:
 
 ## References
 
-- [`nightly.yml`](https://github.com/sebastienrousseau/dotfiles/blob/main/.github/workflows/nightly.yml) — the workflow whose cadence flip triggered this page.
-- [`security-enhanced.yml`](https://github.com/sebastienrousseau/dotfiles/blob/main/.github/workflows/security-enhanced.yml) — earlier daily→weekly reduction.
-- Issue [#861](https://github.com/sebastienrousseau/dotfiles/issues/861).
+- [`nightly.yml`](https://github.com/YuriiF/dotfiles/blob/main/.github/workflows/nightly.yml) — the workflow whose cadence flip triggered this page.
+- [`security-enhanced.yml`](https://github.com/YuriiF/dotfiles/blob/main/.github/workflows/security-enhanced.yml) — earlier daily→weekly reduction.
+- Issue [#861](https://github.com/YuriiF/dotfiles/issues/861).

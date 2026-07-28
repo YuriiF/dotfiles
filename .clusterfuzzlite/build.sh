@@ -15,12 +15,12 @@ cd "$SRC/dotfiles/oss-fuzz-integration/fuzz"
 go get github.com/AdamKorcz/go-118-fuzz-build/testing
 
 compile_native_go_fuzzer \
-  github.com/sebastienrousseau/dotfiles/oss-fuzz-integration/fuzz \
+  github.com/YuriiF/dotfiles/oss-fuzz-integration/fuzz \
   FuzzValidateName \
   fuzz_validate_name
 
 compile_native_go_fuzzer \
-  github.com/sebastienrousseau/dotfiles/oss-fuzz-integration/fuzz \
+  github.com/YuriiF/dotfiles/oss-fuzz-integration/fuzz \
   FuzzInitURLResolver \
   fuzz_init_url_resolver
 

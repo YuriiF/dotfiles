@@ -1,5 +1,5 @@
 {
-  "name": "@sebastienrousseau/dotfiles",
+  "name": "@YuriiF/dotfiles",
   "version": "0.2.511",
   "description": "The Trusted Shell Platform — Universal dotfiles managed by Chezmoi. Features Bash & Zsh for macOS, Linux & WSL. Rust modern tooling & enterprise-grade security.",
   "main": "install.sh",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebastienrousseau/dotfiles.git"
+    "url": "git+https://github.com/YuriiF/dotfiles.git"
   },
   "keywords": [
     "dotfiles",
@@ -50,7 +50,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sebastienrousseau/dotfiles/issues"
+    "url": "https://github.com/YuriiF/dotfiles/issues"
   },
   "homepage": "https://dotfiles.io/",
   "funding": {

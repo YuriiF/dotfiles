@@ -5,7 +5,7 @@ description: Long-form writing on the design and operation of the .dotfiles fram
 
 # Articles
 
-Long-form writing on the design and operation of the [.dotfiles framework](https://github.com/sebastienrousseau/dotfiles) — deep dives into performance, supply-chain safety, developer experience, and the architectural decisions that shape a mature open-source dotfiles project.
+Long-form writing on the design and operation of the [.dotfiles framework](https://github.com/YuriiF/dotfiles) — deep dives into performance, supply-chain safety, developer experience, and the architectural decisions that shape a mature open-source dotfiles project.
 
 <div class="grid cards" markdown>
 

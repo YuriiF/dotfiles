@@ -141,7 +141,7 @@ This means:
 1. Detect existing chezmoi state at `~/.local/share/chezmoi` /
    `~/.config/chezmoi/chezmoi.toml`.
 2. Read the user's pinned source repo from chezmoi.toml; if it's
-   `sebastienrousseau/dotfiles@<v0.2.x>`, warn and confirm.
+   `YuriiF/dotfiles@<v0.2.x>`, warn and confirm.
 3. Run `chezmoi diff` and persist the per-file output to
    `~/.local/state/dotfiles/v0_2_to_v0_3_pre_diff.log` so the
    user has a record of pre-migration state.
@@ -232,7 +232,7 @@ adoption" plateau persists.
 ### B) Two-repo split (framework + defaults)
 
 Publish `dot` framework at `sebastienrousseau/dot` and the
-maintainer's personal defaults at `sebastienrousseau/dotfiles`.
+maintainer's personal defaults at `YuriiF/dotfiles`.
 
 **Pros**: cleanest possible separation. Framework forks trivial.
 **Rejected (for v0.3)**: requires a second repo, doubles the CI

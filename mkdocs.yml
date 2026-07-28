@@ -9,8 +9,8 @@ site_url: https://doc.dotfiles.io/
 site_author: Sebastien Rousseau
 copyright: Copyright &copy; 2015-2026 Sebastien Rousseau
 
-repo_url: https://github.com/sebastienrousseau/dotfiles
-repo_name: sebastienrousseau/dotfiles
+repo_url: https://github.com/YuriiF/dotfiles
+repo_name: YuriiF/dotfiles
 edit_uri: edit/main/docs/
 
 docs_dir: docs
@@ -103,6 +103,6 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sebastienrousseau/dotfiles
+      link: https://github.com/YuriiF/dotfiles
     - icon: fontawesome/brands/mastodon
       link: https://sebastienrousseau.com

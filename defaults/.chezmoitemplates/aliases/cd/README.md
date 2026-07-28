@@ -145,7 +145,7 @@ Effortlessly navigate to critical system directories:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/sebastienrousseau/dotfiles.git
+   git clone https://github.com/YuriiF/dotfiles.git
    ```
 
 2. **Source the script in your shell configuration**:

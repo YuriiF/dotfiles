@@ -30,7 +30,7 @@ HTML_DIR="$BUILD_DIR/html"
 VERSION="$(awk -F'"' '/^dotfiles_version/ {print $2; exit}' "$REPO_ROOT/defaults/.chezmoidata.toml")"
 TITLE=".dotfiles Manual"
 SUBTITLE="A Trusted Agent Workstation for macOS, Linux, and WSL"
-REPO_URL="https://github.com/sebastienrousseau/dotfiles"
+REPO_URL="https://github.com/YuriiF/dotfiles"
 MANUAL_URL="https://sebastienrousseau.github.io/dotfiles/manual"
 BUILD_DATE="$(date +%Y-%m-%d)"
 
@@ -943,7 +943,7 @@ $sub_nav\\
     echo '</ul></nav>'
     echo '</main>'
     echo '<footer class="site-footer"><div class="footer-inner">'
-    echo "<p>Generated $BUILD_DATE · <a href=\"$REPO_URL\">sebastienrousseau/dotfiles</a> · <a href=\"$REPO_URL/blob/main/LICENSE\">MIT License</a></p>"
+    echo "<p>Generated $BUILD_DATE · <a href=\"$REPO_URL\">YuriiF/dotfiles</a> · <a href=\"$REPO_URL/blob/main/LICENSE\">MIT License</a></p>"
     echo '</div></footer>'
     echo '<script src="../search.js" defer></script>'
     echo '</body></html>'
@@ -1151,7 +1151,7 @@ build_landing() {
       {
         "@type": "Question",
         "name": "How do I install .dotfiles?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Run: bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)\" — then verify with 'dot doctor'."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Run: bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)\" — then verify with 'dot doctor'."}
       },
       {
         "@type": "Question",
@@ -1249,12 +1249,12 @@ HTML
     <p>Integrity: <a href="SHA256SUMS">SHA256SUMS</a> · Version history: <a href="$REPO_URL/releases">GitHub Releases</a></p>
 
     <h2>Quick start</h2>
-    <pre><code>bash -c "\$(curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh)"
+    <pre><code>bash -c "\$(curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh)"
 dot doctor
 dot learn</code></pre>
 
     <h2>Source</h2>
-    <p>Repository: <a href="$REPO_URL">sebastienrousseau/dotfiles</a> · License: <a href="$REPO_URL/blob/main/LICENSE">MIT</a></p>
+    <p>Repository: <a href="$REPO_URL">YuriiF/dotfiles</a> · License: <a href="$REPO_URL/blob/main/LICENSE">MIT</a></p>
   </main>
 
   <footer class="site-footer">

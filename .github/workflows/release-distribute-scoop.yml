@@ -129,7 +129,7 @@ jobs:
             exit 1
           fi
 
-          URL="https://github.com/sebastienrousseau/dotfiles/releases/download/${TAG}/dot-${VERSION}.zip"
+          URL="https://github.com/YuriiF/dotfiles/releases/download/${TAG}/dot-${VERSION}.zip"
 
           # Update the manifest using jq. The release zip extracts as
           # dot-VERSION/... so extract_dir must also follow the version

@@ -13,7 +13,7 @@ info() { printf '\033[1;34m[devcontainer]\033[0m %s\n' "$*"; }
 
 # ---------- chezmoi init & apply ------------------------------------------- #
 
-DOTFILES_REPO="https://github.com/sebastienrousseau/dotfiles.git"
+DOTFILES_REPO="https://github.com/YuriiF/dotfiles.git"
 DOTFILES_SOURCE="${HOME}/.dotfiles"
 
 # Clone dotfiles if not already present (Codespaces clones the repo as workspace)

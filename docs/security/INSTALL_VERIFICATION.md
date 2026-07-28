@@ -9,7 +9,7 @@ why those checks matter, and how to obtain the per-release expected
 hashes used by the verified-install path in the README.
 
 Managed under
-[#858](https://github.com/sebastienrousseau/dotfiles/issues/858).
+[#858](https://github.com/YuriiF/dotfiles/issues/858).
 
 ## What is verified
 
@@ -88,7 +88,7 @@ If you run the verified install and `shasum -a 256 -c` reports
 
 1. **Don't run the installer.** The hash mismatch means either the
    release was retagged (rare) or someone is MITM-ing your download.
-2. Check the [Releases page](https://github.com/sebastienrousseau/dotfiles/releases)
+2. Check the [Releases page](https://github.com/YuriiF/dotfiles/releases)
    for the matching tag. The per-release `install.sh` SHA is
    embedded in the README at the time of that release; you can also
    recover it from the git history of `README.md`.
@@ -119,4 +119,4 @@ PR.
   chezmoi installer.
 - `tests/unit/install/test_install_chezmoi_verified.sh` — the
   negative test.
-- Issue [#858](https://github.com/sebastienrousseau/dotfiles/issues/858).
+- Issue [#858](https://github.com/YuriiF/dotfiles/issues/858).

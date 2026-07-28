@@ -69,7 +69,7 @@ RUN_INTEGRATION=1 ./tests/framework/test_runner.sh
 
 The runner accepts `--jobs N` (number of files concurrently) and
 `--jobs auto` (detected CPU count via `nproc` on Linux,
-`sysctl -n hw.ncpu` on macOS). Closes [#867](https://github.com/sebastienrousseau/dotfiles/issues/867).
+`sysctl -n hw.ncpu` on macOS). Closes [#867](https://github.com/YuriiF/dotfiles/issues/867).
 
 ```bash
 # Use all detected cores
@@ -102,7 +102,7 @@ configure the default without touching the command line.
 
 `tests/snapshots/` holds blessed outputs for the user-facing `dot`
 commands (`dot --help`, `dot version`, `dot doctor`, `dot perf`,
-`dot health`). Closes part of [#881](https://github.com/sebastienrousseau/dotfiles/issues/881).
+`dot health`). Closes part of [#881](https://github.com/YuriiF/dotfiles/issues/881).
 
 ```bash
 # Run the snapshot tests:
@@ -134,7 +134,7 @@ adversarial inputs (unknown flags, garbage positionals, symlink
 loops in `$HOME`, empty `$PATH`, doubled flags, 4 KB-long arg
 strings, NUL bytes in env vars) and asserts each one either
 succeeds cleanly or fails fast with a clear non-zero exit — but
-never hangs. Closes part of [#881](https://github.com/sebastienrousseau/dotfiles/issues/881).
+never hangs. Closes part of [#881](https://github.com/YuriiF/dotfiles/issues/881).
 
 ```bash
 bash tests/fuzz/fuzz_install.sh

@@ -28,7 +28,7 @@ would break consumer pins on existing SHAs).
 ```sh
 # 0. Pick the release to verify
 TAG=v0.2.503
-REPO=sebastienrousseau/dotfiles
+REPO=YuriiF/dotfiles
 
 # 1. Download every attestation artefact
 gh release download "$TAG" --repo "$REPO" \
@@ -69,7 +69,7 @@ sha256sum -c ALL_SHA256SUMS                        # one line per asset
 
 All four commands should print "Verified" / "PASSED" / "OK" and
 exit 0. If any fails, **the release was tampered with**: open
-an issue at <https://github.com/sebastienrousseau/dotfiles/issues>
+an issue at <https://github.com/YuriiF/dotfiles/issues>
 and do **not** install.
 
 ---
@@ -143,21 +143,21 @@ run `chezmoi apply`):
 ```sh
 verify-dot-release() {
   local tag="${1:-$(gh release view --json tagName --jq .tagName \
-    --repo sebastienrousseau/dotfiles)}"
+    --repo YuriiF/dotfiles)}"
   local tmp
   tmp="$(mktemp -d)"
   ( cd "$tmp" \
-    && gh release download "$tag" --repo sebastienrousseau/dotfiles \
+    && gh release download "$tag" --repo YuriiF/dotfiles \
       --pattern 'dotfiles-sbom.*' \
     && cosign verify-blob \
       --certificate dotfiles-sbom.spdx.json.pem \
       --signature  dotfiles-sbom.spdx.json.sig \
-      --certificate-identity-regexp '^https://github.com/sebastienrousseau/dotfiles/' \
+      --certificate-identity-regexp '^https://github.com/YuriiF/dotfiles/' \
       --certificate-oidc-issuer https://token.actions.githubusercontent.com \
       dotfiles-sbom.spdx.json \
     && slsa-verifier verify-artifact dotfiles-sbom.spdx.json \
       --provenance-path dotfiles-sbom.spdx.json.intoto.jsonl \
-      --source-uri github.com/sebastienrousseau/dotfiles \
+      --source-uri github.com/YuriiF/dotfiles \
       --source-tag "$tag"
   )
   local rc=$?
@@ -181,7 +181,7 @@ verify-dot-release v0.2.502    # verify specific tag
    `chezmoi apply`.
 2. **Compare assets**. The release page shows file sizes — if
    yours don't match what's on
-   <https://github.com/sebastienrousseau/dotfiles/releases>, you
+   <https://github.com/YuriiF/dotfiles/releases>, you
    downloaded from a man-in-the-middle.
 3. **Report**: open an issue and email
    `security@sebastienrousseau.com` (encrypted to the WKD-published

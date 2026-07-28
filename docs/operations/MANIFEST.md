@@ -43,7 +43,7 @@ Example output (truncated):
   "emitter": {
     "name": "dot env emit",
     "version": "0.2.503",
-    "repo": "github.com/sebastienrousseau/dotfiles"
+    "repo": "github.com/YuriiF/dotfiles"
   },
   "host": {
     "hostname": "rousseau-mbp-m1",

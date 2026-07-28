@@ -15,7 +15,7 @@ This page is where time-bound exceptions live. An entry here suppresses
 the check for one specific `(ecosystem, package)` pair, with an expiry
 date so the exception cannot accumulate quietly.
 
-Managed under [#877](https://github.com/sebastienrousseau/dotfiles/issues/877).
+Managed under [#877](https://github.com/YuriiF/dotfiles/issues/877).
 
 ## Active exceptions
 
@@ -79,8 +79,8 @@ auto-fail the gate even when they're still listed here.
 
 ## References
 
-- [`tools/ci/check-deps-dev.sh`](https://github.com/sebastienrousseau/dotfiles/blob/main/tools/ci/check-deps-dev.sh) — the scanner.
-- [`.github/workflows/deps-dev-validation.yml`](https://github.com/sebastienrousseau/dotfiles/blob/main/.github/workflows/deps-dev-validation.yml) — CI wiring.
-- [`tests/unit/security/test_check_deps_dev.sh`](https://github.com/sebastienrousseau/dotfiles/blob/main/tests/unit/security/test_check_deps_dev.sh) — contract test against canned fixtures.
+- [`tools/ci/check-deps-dev.sh`](https://github.com/YuriiF/dotfiles/blob/main/tools/ci/check-deps-dev.sh) — the scanner.
+- [`.github/workflows/deps-dev-validation.yml`](https://github.com/YuriiF/dotfiles/blob/main/.github/workflows/deps-dev-validation.yml) — CI wiring.
+- [`tests/unit/security/test_check_deps_dev.sh`](https://github.com/YuriiF/dotfiles/blob/main/tests/unit/security/test_check_deps_dev.sh) — contract test against canned fixtures.
 - [deps.dev API reference](https://docs.deps.dev/api/v3/).
-- Issue [#877](https://github.com/sebastienrousseau/dotfiles/issues/877).
+- Issue [#877](https://github.com/YuriiF/dotfiles/issues/877).

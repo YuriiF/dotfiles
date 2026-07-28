@@ -53,7 +53,7 @@ ls -la ~/.dotfiles/
    ```bash
    # Move dotfiles to WSL2 filesystem
    cd ~
-   git clone https://github.com/sebastienrousseau/dotfiles.git .dotfiles
+   git clone https://github.com/YuriiF/dotfiles.git .dotfiles
    ```
 
 3. **Configure Git for WSL2**:
@@ -394,7 +394,7 @@ rm -rf ~/.config/chezmoi/
 
 # 4. Reinstall from scratch
 cd /tmp
-curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh | bash
 ```
 
 #### Scenario: WSL2 completely broken
@@ -412,7 +412,7 @@ wsl --unregister Ubuntu
 wsl --import Ubuntu C:\WSL\Ubuntu Ubuntu-backup.tar
 
 # 4. Reinstall dotfiles
-wsl -d Ubuntu -u root -- curl -fsSL https://raw.githubusercontent.com/sebastienrousseau/dotfiles/main/install.sh | bash
+wsl -d Ubuntu -u root -- curl -fsSL https://raw.githubusercontent.com/YuriiF/dotfiles/main/install.sh | bash
 ```
 
 ### Partial Recovery
@@ -719,7 +719,7 @@ echo "Diagnostic report saved to ~/diagnostic-report.txt"
 
 #### Support channels
 
-- GitHub Issues: [Repository Issues](https://github.com/sebastienrousseau/dotfiles/issues)
+- GitHub Issues: [Repository Issues](https://github.com/YuriiF/dotfiles/issues)
 - WSL2 Documentation: [Microsoft WSL Docs](https://docs.microsoft.com/en-us/windows/wsl/)
 - Nix Documentation: [Nix Manual](https://nixos.org/manual/nix/stable/)
 - Community Support: Stack Overflow, NixOS Discourse

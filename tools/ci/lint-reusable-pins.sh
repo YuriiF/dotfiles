@@ -9,7 +9,7 @@
 # Closes the lint-rule half of #855. Acceptable form for a reusable
 # workflow reference:
 #
-#     uses: sebastienrousseau/dotfiles/.github/workflows/reusable-X.yml@<40-hex-sha>
+#     uses: YuriiF/dotfiles/.github/workflows/reusable-X.yml@<40-hex-sha>
 #
 # Rejected forms:
 #
