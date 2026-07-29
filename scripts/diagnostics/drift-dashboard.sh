@@ -92,16 +92,21 @@ if [[ -n "$src_dir" && -d "$src_dir/.git" ]]; then
 fi
 
 # -----------------------------------------------------------------------------
-# Class 4: stale source (source older than deployed = pending revert risk)
-# Compute by walking chezmoi-managed targets and comparing mtimes.
+# Class 4: stale source (deployed hand-edit that `apply` would clobber)
+# Only meaningful for files class 1 already shows differing — mtime order
+# alone can't tell "chezmoi just wrote this" from "user edited it after",
+# since deploy time is always >= source time. Scoping to cm_status's
+# already-differing files turns it into "which side of that diff is newer".
 # -----------------------------------------------------------------------------
 
 stale_list=""
 stale_count=0
-if [[ -n "$src_dir" ]]; then
-  while IFS= read -r target; do
-    [[ -z "$target" ]] && continue
-    target_path="$target"
+if [[ -n "$src_dir" && -n "$cm_status" ]]; then
+  while IFS= read -r status_line; do
+    [[ -z "$status_line" ]] && continue
+    rel="${status_line:3}"
+    [[ -z "$rel" ]] && continue
+    target_path="$HOME/$rel"
     [[ ! -e "$target_path" ]] && continue
     src_path="$(chezmoi source-path "$target_path" 2>/dev/null || true)"
     [[ -z "$src_path" || ! -e "$src_path" ]] && continue
@@ -109,9 +114,7 @@ if [[ -n "$src_dir" ]]; then
       stale_list+="$target_path"$'\n'
       stale_count=$((stale_count + 1))
     fi
-  done < <(chezmoi managed 2>/dev/null | head -200 | while IFS= read -r rel; do
-    printf '%s\n' "$HOME/$rel"
-  done)
+  done <<<"$cm_status"
 fi
 stale_list="${stale_list%$'\n'}"
 
