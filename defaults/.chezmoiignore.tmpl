@@ -174,3 +174,15 @@ Library/**
 .config/mako
 .config/mako/**
 {{- end }}
+
+{{- if ne .chezmoi.os "darwin" -}}
+symlink_Desktop.tmpl
+symlink_Documents.tmpl
+symlink_Downloads.tmpl
+symlink_Drop.tmpl
+symlink_Movies.tmpl
+symlink_Music.tmpl
+symlink_Pictures.tmpl
+symlink_Public.tmpl
+symlink_Safe.tmpl
+{{- end -}}
