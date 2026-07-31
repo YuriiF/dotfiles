@@ -101,7 +101,7 @@ uv = "latest"
 # wrapper pattern — do not reintroduce it.
 opencode = "latest"
 kiro-cli = "latest"
-"npm:autohand-cli" = "latest"
+# "npm:autohand-cli" = "latest"
 "npm:@qwen-code/qwen-code" = "latest"
 "npm:@guizmo-ai/zai-cli" = "latest"
 # "pipx:mistral-vibe" = "latest"  # disabled 2026-05-12: dep `mistralai` quarantined on PyPI; re-enable when restored
