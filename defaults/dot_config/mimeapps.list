@@ -1,15 +1,10 @@
 [Default Applications]
-# Browser
 text/html=google-chrome.desktop
 x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
-
-# File manager
 inode/directory=thunar.desktop
-
-# Video
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
 video/webm=mpv.desktop
@@ -19,8 +14,6 @@ video/x-flv=mpv.desktop
 video/mpeg=mpv.desktop
 video/ogg=mpv.desktop
 video/3gpp=mpv.desktop
-
-# Audio
 audio/flac=mpv.desktop
 audio/mp3=mpv.desktop
 audio/mp4=mpv.desktop
@@ -32,8 +25,6 @@ audio/webm=mpv.desktop
 audio/x-flac=mpv.desktop
 audio/x-m4a=mpv.desktop
 audio/x-vorbis+ogg=mpv.desktop
-
-# Images
 image/avif=mpv.desktop
 image/bmp=mpv.desktop
 image/gif=mpv.desktop
@@ -43,8 +34,6 @@ image/png=mpv.desktop
 image/svg+xml=mpv.desktop
 image/tiff=mpv.desktop
 image/webp=mpv.desktop
-
-# Text / Code → Neovim
 application/javascript=nvim.desktop
 application/json=nvim.desktop
 application/toml=nvim.desktop
@@ -65,13 +54,13 @@ text/x-ruby=nvim.desktop
 text/x-rust=nvim.desktop
 text/x-shellscript=nvim.desktop
 text/x-yaml=nvim.desktop
-
-# Documents
 application/pdf=org.pwmt.zathura.desktop
 application/epub=org.pwmt.zathura.desktop
-
-# Archives
 application/zip=xarchiver.desktop
 application/x-7z-compressed=xarchiver.desktop
 application/x-gzip=xarchiver.desktop
 application/x-tar=xarchiver.desktop
+application/x-mimearchive=com.brave.Browser.beta.desktop
+
+[Added Associations]
+application/x-mimearchive=com.brave.Browser.beta.desktop;
