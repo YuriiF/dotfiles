@@ -68,7 +68,6 @@ zoxide = "latest"
 # executable"), which silently breaks `dot doctor`'s startup benchmark.
 # It's provided natively by Brewfile.cli (arm64) and by Linux package
 # managers instead.
-"aqua:ollama/ollama" = "latest"
 "aqua:Nukesor/pueue/pueue" = "4.0.4"
 "aqua:Nukesor/pueue/pueued" = "4.0.4"
 "aqua:dandavison/delta" = "latest"
