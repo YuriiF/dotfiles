@@ -28,7 +28,7 @@ node = "24"
 python = ["3.11", "3.12", "3.14"]
 
 # Go
-go = "latest"
+# go = "latest"
 
 # Rust
 rust = "latest"
@@ -122,7 +122,7 @@ MISE_EXPERIMENTAL = "1"
 # operation with "failed to parse template" — breaking `dot env`,
 # `mise install`, and shell startup on any machine where `gh auth` hasn't
 # run yet.
-GITHUB_TOKEN = "{{exec(command='gh auth token 2>/dev/null || true')}}"
+# GITHUB_TOKEN = "{{exec(command='gh auth token 2>/dev/null || true')}}"
 # Build caches → /tmp (cleared on reboot)
 GOCACHE = "/tmp/builds/go-cache"
 GOTMPDIR = "/tmp/builds/go-tmp"
