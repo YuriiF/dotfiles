@@ -48,8 +48,12 @@ logs:
 stats:
   # Enable graphs
   graphs:
-    - CPU
-    - Memory
+    - caption: CPU (%)
+      statPath: DerivedStats.CPUPercentage
+      color: cyan
+    - caption: Memory (%)
+      statPath: DerivedStats.MemoryPercentage
+      color: green
 
 # Commandline templates
 commandTemplates:
@@ -180,7 +184,7 @@ customCommands:
 # Replacements allow you to customise displayed strings
 replacements:
   imageNamePrefixes:
-    # Remove common registry prefixes for cleaner display
-    - "docker.io/library/"
-    - "ghcr.io/"
-    - "gcr.io/"
+    # Replace common registry prefixes with an empty string for cleaner display
+    "docker.io/library/": ""
+    "ghcr.io/": ""
+    "gcr.io/": ""
