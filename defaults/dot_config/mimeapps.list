@@ -35,7 +35,7 @@ image/svg+xml=mpv.desktop
 image/tiff=mpv.desktop
 image/webp=mpv.desktop
 application/javascript=nvim.desktop
-application/json=nvim.desktop
+application/json=micro.desktop
 application/toml=nvim.desktop
 application/x-sh=nvim.desktop
 application/xml=nvim.desktop
@@ -64,3 +64,4 @@ application/x-mimearchive=com.brave.Browser.beta.desktop
 
 [Added Associations]
 application/x-mimearchive=com.brave.Browser.beta.desktop;
+application/json=micro.desktop;
