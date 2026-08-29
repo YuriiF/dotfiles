@@ -22,7 +22,6 @@ marker_marked = { fg = "#f9e2af", bg = "#f9e2af" }
 # Tabs
 tab_active = { fg = "#1e1e2e", bg = "#cba6f7" }
 tab_inactive = { fg = "#cdd6f4", bg = "#45475a" }
-tab_width = 1
 
 # Count (selection indicator)
 count_copied = { fg = "#1e1e2e", bg = "#a6e3a1" }
