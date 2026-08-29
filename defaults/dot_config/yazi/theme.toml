@@ -83,20 +83,20 @@ footer = { fg = "#313244", bg = "#cdd6f4" }
 
 [filetype]
 rules = [
-    # Media
-    { mime = "image/*", fg = "#94e2d5" },
-    { mime = "video/*", fg = "#f9e2af" },
-    { mime = "audio/*", fg = "#f9e2af" },
+  # Media
+  { mime = "image/*", fg = "#94e2d5" },
+  { mime = "video/*", fg = "#f9e2af" },
+  { mime = "audio/*", fg = "#f9e2af" },
 
-    # Archives
-    { mime = "application/zip", fg = "#f5c2e7" },
-    { mime = "application/gzip", fg = "#f5c2e7" },
-    { mime = "application/x-tar", fg = "#f5c2e7" },
+  # Archives
+  { mime = "application/zip", fg = "#f5c2e7" },
+  { mime = "application/gzip", fg = "#f5c2e7" },
+  { mime = "application/x-tar", fg = "#f5c2e7" },
 
-    # Documents
-    { mime = "application/pdf", fg = "#f38ba8" },
-    { mime = "application/json", fg = "#f9e2af" },
+  # Documents
+  { mime = "application/pdf", fg = "#f38ba8" },
+  { mime = "application/json", fg = "#f9e2af" },
 
-    # Fallback
-    { name = "*/", fg = "#89b4fa", bold = true },
+  # Fallback
+  { url = "*/", fg = "#89b4fa", bold = true },
 ]
