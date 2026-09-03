@@ -125,6 +125,11 @@ function _dotfiles_async_init
             pueued -d >/dev/null 2>&1
         end
     end
+
+    # Lazy tool initializers can overwrite PATH wholesale; keep ROCm usable.
+    for p in /opt/rocm/bin /opt/rocm/lib/llvm/bin
+        test -d "$p"; and not contains -- "$p" $PATH; and set -p PATH "$p"
+    end
 end
 
 function _dotfiles_trigger_hydration --on-event fish_prompt
