@@ -13,8 +13,8 @@ if set -q FISH_CONFIG_SOURCED
 end
 set -g FISH_CONFIG_SOURCED 1
 
-{{- /* Input Validation: Ensure crucial variables are set */ -}}
-{{- if not .chezmoi.homeDir -}}
+# Input Validation: Ensure crucial variables are set
+{{ if not .chezmoi.homeDir }}
   {{- fail "Critical Error: .chezmoi.homeDir is not set!" -}}
 {{- end -}}
 
