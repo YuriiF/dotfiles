@@ -52,3 +52,17 @@ set -p PATH $HOME/Android/Sdk/platform-tools
 set -p PATH $HOME/Android/Sdk/cmdline-tools/latest/bin
 # Force the Android Studio emulator Qt framework to use XWayland inside Niri
 set -gx QT_QPA_PLATFORM xcb
+
+set -gx ROCM_PATH /opt/rocm
+set -gx HIP_PATH /opt/rocm
+set -gx HIP_PLATFORM amd
+set -gx HIP_CLANG_PATH /opt/rocm/lib/llvm/bin
+
+fish_add_path /opt/rocm/bin
+fish_add_path /opt/rocm/lib/llvm/bin
+
+set -gx LD_LIBRARY_PATH \
+  /opt/rocm/lib \
+  /opt/rocm/lib64 \
+  /opt/rocm/lib/llvm/lib \
+  $LD_LIBRARY_PATH
