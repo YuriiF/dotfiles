@@ -50,5 +50,7 @@ set -g fish_greeting ""
 set -p PATH $HOME/Android/Sdk/emulator
 set -p PATH $HOME/Android/Sdk/platform-tools
 set -p PATH $HOME/Android/Sdk/cmdline-tools/latest/bin
+set -p PATH $ROCM_PATH/bin
+set -p PATH $ROCM_PATH/lib/llvm/bin
 # Force the Android Studio emulator Qt framework to use XWayland inside Niri
 set -gx QT_QPA_PLATFORM xcb
