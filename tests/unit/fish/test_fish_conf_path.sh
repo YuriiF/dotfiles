@@ -29,4 +29,14 @@ else
   printf '%b\n' "  ${RED}✗${NC} $CURRENT_TEST: should contain PATH construction"
 fi
 
+test_start "fish_conf_env_has_rocm_paths"
+if grep -q '/opt/rocm/bin' "$CONF_FILE" 2>/dev/null && \
+  grep -q '/opt/rocm/lib/llvm/bin' "$CONF_FILE" 2>/dev/null; then
+  ((TESTS_PASSED++))
+  printf '%b\n' "  ${GREEN}✓${NC} $CURRENT_TEST: contains ROCm paths"
+else
+  ((TESTS_FAILED++))
+  printf '%b\n' "  ${RED}✗${NC} $CURRENT_TEST: should contain ROCm paths"
+fi
+
 echo "RESULTS:$TESTS_RUN:$TESTS_PASSED:$TESTS_FAILED"
