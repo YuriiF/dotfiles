@@ -11,14 +11,9 @@ status is-interactive; or return
 if set -q FISH_CONFIG_SOURCED
     return
 end
+
 set -g FISH_CONFIG_SOURCED 1
 
-{{- /* Input Validation: Ensure crucial variables are set */ -}}
-{{- if not .chezmoi.homeDir -}}
-  {{- fail "Critical Error: .chezmoi.homeDir is not set!" -}}
-{{- end -}}
-
-# Load local customizations if they exist
 if test -f "$HOME/.config/fish/config.fish.local"
     source "$HOME/.config/fish/config.fish.local"
 end
@@ -38,7 +33,12 @@ if not set -q LS_COLORS
             set -gx LS_COLORS "$_val[2]"
         end
     else if command -q dircolors
-        set -gx LS_COLORS (dircolors -c 2>/dev/null | string match -r "LS_COLORS='([^']+)'" | tail -1)
+        # Clean Fish implementation for inline fallback
+        set -l _raw (dircolors -c 2>/dev/null)
+        set -l _val (string match -r "LS_COLORS='([^']+)'" $_raw)
+        if set -q _val[2]
+            set -gx LS_COLORS "$_val[2]"
+        end
     else if test (uname -s) = "Darwin"
         set -gx CLICOLOR 1
         set -gx LSCOLORS "ExFxCxDxBxegedabagacad"
@@ -47,10 +47,6 @@ end
 
 # Welcome message
 set -g fish_greeting ""
-set -p PATH $HOME/Android/Sdk/emulator
-set -p PATH $HOME/Android/Sdk/platform-tools
-set -p PATH $HOME/Android/Sdk/cmdline-tools/latest/bin
-set -p PATH $ROCM_PATH/bin
-set -p PATH $ROCM_PATH/lib/llvm/bin
-# Force the Android Studio emulator Qt framework to use XWayland inside Niri
-set -gx QT_QPA_PLATFORM xcb
+
+fish_add_path /opt/rocm/bin
+fish_add_path /opt/rocm/lib/llvm/bin
