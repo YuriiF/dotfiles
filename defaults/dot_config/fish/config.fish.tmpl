@@ -13,8 +13,8 @@ if set -q FISH_CONFIG_SOURCED
 end
 set -g FISH_CONFIG_SOURCED 1
 
-# Input Validation: Ensure crucial variables are set
-{{ if not .chezmoi.homeDir }}
+{{- /* Input Validation: Ensure crucial variables are set */ -}}
+{{- if not .chezmoi.homeDir -}}
   {{- fail "Critical Error: .chezmoi.homeDir is not set!" -}}
 {{- end -}}
 
@@ -22,12 +22,6 @@ set -g FISH_CONFIG_SOURCED 1
 if test -f "$HOME/.config/fish/config.fish.local"
     source "$HOME/.config/fish/config.fish.local"
 end
-# conf.d is normally loaded by fish before config.fish. Keep an explicit,
-# idempotent fallback for installations that disable automatic conf.d loading.
-if not set -q DOTFILES_ENV_LOADED; and test -f "$__fish_config_dir/conf.d/env.fish"
-    source "$__fish_config_dir/conf.d/env.fish"
-end
-
 
 # SSH agent — point shells at the systemd user agent socket when available.
 if not set -q SSH_AUTH_SOCK; and set -q XDG_RUNTIME_DIR; and test -S "$XDG_RUNTIME_DIR/ssh-agent.socket"
@@ -58,4 +52,3 @@ set -p PATH $HOME/Android/Sdk/platform-tools
 set -p PATH $HOME/Android/Sdk/cmdline-tools/latest/bin
 # Force the Android Studio emulator Qt framework to use XWayland inside Niri
 set -gx QT_QPA_PLATFORM xcb
-
