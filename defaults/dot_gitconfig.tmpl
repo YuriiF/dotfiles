@@ -47,8 +47,8 @@
 	allowedSignersFile = {{ .chezmoi.homeDir }}/.config/git/allowed_signers
 
 [tag]
-	gpgSign = true
-	forceSignAnnotated = true
+	gpgSign = false
+	forceSignAnnotated = false
 {{- end }}
 
 [alias]
@@ -117,12 +117,13 @@
 
 [pull]
 	rebase = true
+	verifySignatures = false
 
 [rebase]
 	autoStash = true
 
 [merge]
-	verifySignatures = true
+	verifySignatures = false
 	conflictstyle = zdiff3
 
 [rerere]
@@ -175,3 +176,6 @@
 # Create ~/.config/git/config-work with [user] overrides as needed
 [includeIf "gitdir:~/work/"]
 	path = {{ .chezmoi.homeDir }}/.config/git/config-work
+	
+[commit]
+	gpgsign = false
